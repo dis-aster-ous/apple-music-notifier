@@ -1,7 +1,12 @@
+require('dotenv').config();
 const express = require('express');
+const {generateMusickitToken} = require('./lib/musickit.js')
 const app = express();
 const port = 3000;
 
-app.use(express.static('public'));
+app.set('view engine', 'pug');
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+app.get('/', (req, res) =>
+  res.render('index', {musickitToken: generateMusickitToken()}));
+
+app.listen(port, () => console.log(`Listening on port ${port}!`));
