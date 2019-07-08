@@ -8,6 +8,10 @@
   },
   "author": "Aster Ryan <aster@aster.fyi>",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thebinarium/apple-music-notifier.git"
+  },
   "dependencies": {
     "express": "^4.17.1"
   }
